@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e24f3fb3-e2fe-41fb-85e4-94d2b844d620" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2PEf17IfUvjyGpoxZctdJ7OYcEM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/kevin/Desktop/Dashboard Design&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;watcher.settings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\kevin\Desktop\Portfolio Final\video" />
+      <recent name="C:\Users\kevin\Desktop\Portfolio Final\img\Skills" />
+      <recent name="C:\Users\kevin\Desktop\Portfolio Final\img" />
+      <recent name="C:\Users\kevin\WebstormProjects\Portfolio Final\img\Skills" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\kevin\Desktop\Portfolio Final\img" />
+      <recent name="C:\Users\kevin\Desktop\Portfolio Final\projects" />
+      <recent name="C:\Users\kevin\Desktop\Portfolio Final" />
+      <recent name="C:\Users\kevin\Desktop\Portfolio Final\audio" />
+      <recent name="C:\Users\kevin\Desktop\Portfolio Final\img\Projects" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e24f3fb3-e2fe-41fb-85e4-94d2b844d620" name="Changes" comment="" />
+      <created>1683026943501</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1683026943501</updated>
+      <workItem from="1683026944655" duration="10893000" />
+      <workItem from="1683039884252" duration="37000" />
+      <workItem from="1683043243035" duration="6495000" />
+      <workItem from="1683060415483" duration="5555000" />
+      <workItem from="1683118684840" duration="5602000" />
+      <workItem from="1683210055989" duration="1833000" />
+      <workItem from="1683298022375" duration="8588000" />
+      <workItem from="1683552237703" duration="22498000" />
+      <workItem from="1683622282853" duration="24844000" />
+      <workItem from="1683724577207" duration="3454000" />
+      <workItem from="1683733348662" duration="3874000" />
+      <workItem from="1683811373932" duration="1877000" />
+      <workItem from="1683912197455" duration="1736000" />
+      <workItem from="1683993676116" duration="3090000" />
+      <workItem from="1684074563585" duration="5977000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/index.html</url>
+          <line>464</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

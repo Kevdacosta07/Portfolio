@@ -1,0 +1,1683 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* colors variables */
+$main-color: #123138;
+$lightblue-color: #1A4852;
+$ocean-color: #123036;
+$white: #ffffff;
+$black: #000000;
+
+/* font variables */
+$poppins: 'Poppins', sans-serif;
+$lobster: 'Lobster', cursive;
+
+
+/* SETTINGS CSS */
+* 
+{
+    font-family: $poppins;
+    box-sizing: border-box;
+}
+
+ul 
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a 
+{
+    text-decoration: none;
+    color: $black;
+}
+
+/* Mixin */
+
+/* Centre un élément sur les deux axes */
+@mixin center-center 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* Centre un élément sur l'axe principale et à gauche pour l'axe secondaire */
+@mixin center-left 
+{
+    display: flex;
+    align-items: left;
+    justify-content: center;
+}
+
+/* Centre un élément sur l'axe principale et à droite pour l'axe secondaire */
+@mixin center-right 
+{
+    display: flex;
+    align-items: right;
+    justify-content: center;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   MOBILE                                   */
+/* -------------------------------------------------------------------------- */
+
+/* --------------------------------- GENERAL -------------------------------- */
+body 
+{
+    margin: 0;
+    padding: 0;
+    background-color: $lightblue-color;
+}
+
+/* main-nav (burger) */
+.hidden-elements 
+{
+    overflow: hidden;
+    gap: 20px;
+    top: 64px;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    transition: .5s ease-in;
+    z-index: 1;
+    ul 
+    {
+        gap: 20px;
+    }
+}
+
+/* Opened menu burger */
+.hidden-elements[data-state="open"] 
+{
+    height: 60vh;
+    background-color: #123036;
+}
+
+/* Closed menu burger */
+.hidden-elements[data-state='close']
+{
+    height: 0vh;
+}
+
+/* Main navigation (top) */
+.main-nav 
+{
+    background-color: $main-color;
+    padding: 20px;
+    .title-nav 
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        a 
+        {
+            color: $white;
+        }
+
+        i 
+        {
+            color: $white;
+            display: block;
+        }
+
+        .title 
+        {
+            font-family: $lobster;
+            font-size: 20px
+        }
+    }
+
+
+    /* Liste de la barre de navigation */
+    .hidden-elements 
+    {
+        @include center-center();
+        flex-direction: column;
+        text-align: center;
+
+        .main-nav-ul
+        {
+            display: flex;
+            flex-direction: column;
+        }
+
+        a 
+        {
+            color: white;
+            font-size: 20px;
+        }
+
+        .logo 
+        {
+            margin-top: 30px;
+            width: 50px;
+            height: auto;
+        }
+    }
+}
+
+/* Footer */
+footer
+{
+    background-color: #252525;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .number, .address, .hour
+    {
+        margin-bottom: 20px;
+    }
+
+    .address
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        i 
+        {
+            font-size: 20px;
+            color: white;
+        }
+
+        p 
+        {
+            color: white;
+            width: 70%;
+            text-align: center;
+        }
+    }
+
+    .hour 
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        i 
+        {
+            color: white;
+        }
+
+        p 
+        {
+            color: white;
+            width: 170px;
+            text-align: center;
+        }
+    }
+
+    .number
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        i 
+        {
+            color: white;
+        }
+
+        p 
+        {
+            color: white;
+        }
+    }
+
+    .copyright
+    {
+        p 
+        {
+            color: white;
+        }
+    }
+}
+
+
+/* HOME */
+.welcome-container 
+{
+    background-color: rgb(2, 29, 72);
+    height: 90vh;
+    @include center-center();
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("../images/mobile-bg.png");
+    background-position: center;
+    background-size: cover;
+
+    .text-elements-container 
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: fit-content;
+
+        h1 
+        {
+            font-family: $lobster;
+            color: white;
+            font-weight: 200;
+            font-size: 15vw;
+            margin: 0;
+            animation-name: transition;
+            animation-duration: 0.8s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.2s;
+            animation-fill-mode: forwards;
+            transform: translateX(-200%);
+            opacity: 0;
+        }
+
+        p 
+        {
+            text-align: center;
+            width: 70%;
+            color: white;
+            margin: 40px 0;
+            animation-name: transition;
+            animation-duration: 0.8s;
+            animation-fill-mode: forwards;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.4s;
+            transform: translateX(200%);
+            opacity: 0;
+        }
+
+        .btns-container 
+        {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 30px;
+
+            a 
+            {
+                padding: 10px 20px;
+                margin: 0 10px;
+                border-radius: 20px;
+            }
+
+            a.about
+            {
+                background-color: #26616d;
+                color: white;
+                animation-name: transition;
+                animation-duration: 0.8s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 0.6s;
+                animation-fill-mode: forwards;
+                transform: translateX(-200%);
+                opacity: 0;
+            }
+
+            a.menus
+            {
+                background-color: #ffffff;
+                animation-name: transition;
+                animation-duration: 0.8s;
+                animation-timing-function: ease-in-out;
+                animation-delay: 0.6s;
+                animation-fill-mode: forwards;
+                transform: translateX(200%);
+                opacity: 0;
+            }
+
+            @keyframes transition 
+            {
+                100% 
+                {
+                    transform: translateX(0);
+                    opacity: 1;
+                }    
+            }
+        }
+    }
+}
+
+/* Prévisualisation des menus sur la page d'accueil */
+.menu-preview-container 
+{
+    display: flex;
+    flex-direction: column;
+    background-color: $main-color;
+    justify-content: center;
+    padding-bottom: 20px;
+
+    .menu-preview-title 
+    {
+        display: flex;
+        justify-content: center;
+        h2 
+        {
+            width: fit-content;
+            color: white;
+            font-family: $lobster;
+            font-weight: 200;
+            font-size: 30px;
+            padding: 10px 50px;
+            background-color: $ocean-color;
+            border-radius: 15px;
+            border: 2px solid $white;
+        }
+    }
+
+    .menu-preview
+    {
+        @include center-center();
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        .card-menu 
+        {
+            background-size: cover;
+            @include center-center();
+            flex-direction: column;
+            background-color: white;
+            width: 80%;
+            max-width: 300px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px rgb(83, 83, 83);
+            margin-bottom: 25px;
+
+            .price-container 
+            {
+                display: flex;
+                justify-content: flex-start;
+                width: 100%;
+                p
+                {
+                    font-family: $lobster;
+                    color: black;
+                    margin: 10px;
+                    width: fit-content;
+                }
+            }
+
+            .text-container 
+            {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                padding-bottom: 20px;
+                h3 
+                {
+                    color: black;
+                    margin-top: 0;
+                }
+
+                p 
+                {
+                    color: black;
+                    text-align: center;
+                    width: 85%;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .menu-preview-button 
+    {
+        display: flex;
+        justify-content: center;
+
+        /* Bouton "Voir la liste des menus" */
+        a 
+        {
+            color: white;
+            background-color: #0d2427;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 12px;
+            box-shadow: 0px 0px 2px white;
+
+            /* Animation du bouton "Voir la liste des menus" */
+            animation-name: shrink;
+            animation-iteration-count: infinite;
+            animation-duration: 4s;
+            animation-delay: 0s;
+            animation-timing-function: ease-in;
+
+            @keyframes shrink 
+            {
+                0% 
+                {
+                    box-shadow: 0px 0px 4px white;
+                }
+
+                20% 
+                {
+                    box-shadow: 0px 0px 15px white;
+                }
+
+                40% 
+                {
+                    box-shadow: 0px 0px 8px white;
+                }
+
+                80% 
+                {
+                    box-shadow: 0px 0px 20px white;
+                }
+
+                100% 
+                {
+                    box-shadow: 0px 0px 4px white;
+                }
+            }
+
+
+            /* Icône fontawesome */
+            i 
+            {
+                font-size: inherit;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+
+/* CONTACT */
+.contact-title-container
+{
+    background-color: $lightblue-color;
+    padding: 30px 0;
+
+    .contact-title 
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: white;
+
+        h1 
+        {
+            font-family: $lobster;
+            font-weight: 100;
+        }
+
+        p 
+        {
+            font-size: 12px;
+            font-weight: 300;
+        }
+    }
+}
+
+.contact-form-container 
+{
+    background-color: white;
+    padding: 30px 0;
+
+    .contact-form 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .row 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100%;
+        }
+
+        input:not(textarea[name='message'])
+        {
+            border: none;
+            border-bottom: 1px solid black;
+        }
+
+        input:focus 
+        {
+            outline: none;
+        }
+
+        input[name='name'], input[name='firstname'], input[name='email']
+        {
+            width: 80%;
+            margin: 20px;
+        }
+
+        textarea[name='message'] 
+        {
+            width: 80%;
+            height: 200px;
+            margin: 20px;
+            resize: none;
+            border: none;
+            border: 1px solid black;
+        }
+
+        textarea:focus 
+        {
+            outline: none;
+        }
+        
+        button 
+        {
+            border: none;
+            background-color: $lightblue-color;
+            border-radius: 30px;
+            padding: 10px 30px;
+            color: white;
+            margin-top: 20px;
+            font-weight: 500;
+            font-size: 16px;
+        }
+    }
+}
+
+
+/* RESERVE */
+.reservation-container 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .reservation-title 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 30px 0;
+
+        background-color: $lightblue-color;
+
+        h1 
+        {
+            text-align: center;
+            color: white;
+            font-family: $lobster;
+            font-weight: 100;
+            font-size: 9vw;
+            margin: 20px 0;
+        }
+
+        p 
+        {
+            text-align: center;
+            color: white;
+            font-weight: 400;
+            font-size: 3.5vw;
+        }
+    }
+
+    .reservation-form-container 
+    {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 30px 0;
+        background-color: white;
+
+        .reservation-form
+        {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            width: 80%;
+            margin: 20px;
+
+            padding: 20px;
+
+            box-shadow: 0px 0px 5px rgb(49, 49, 49);
+            border-radius: 20px;
+
+            .row 
+            {
+                width: 100%;
+            }
+
+            input 
+            {
+                margin: 20px 0;
+                border: none;
+                border-bottom: 1px solid black;
+                font-size: 14px;
+                text-align: left;
+                width: 100%;
+            }
+
+            input:focus 
+            {
+                outline: none;
+            }
+
+            button 
+            {
+                background-color: $lightblue-color;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 20px;
+                border: none;
+            }
+        }
+
+        .form-img 
+        {
+            display: none;
+        }
+    }
+}
+
+
+/* MENU */
+.menu-title /* Titre de la page */
+{
+    width: 100%;
+    height: 125px;
+    background-image: url("../images/menu-title-bg.png");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 /* TITRE */
+    {
+        color: white;
+        font-family: $lobster;
+        font-weight: 100;
+        text-align: center
+    }
+}
+
+/* section qui contient tous les menus */
+.menus-section 
+{
+    @include center-center();
+    padding: 50px 0px;
+    width: 100%;
+    flex-direction: column;
+
+    .menu 
+    {
+        display: flex;
+        flex-direction: column;
+        border: 4px solid white;
+        width: 80%;
+        max-width: 280px;
+        position: relative;
+        height: fit-content;
+        margin: 30px 0;
+
+        .title /* Le titre pour chaque menu (Entrées, plats...) */
+        {
+            display: inline;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            color: white;
+            font-weight: 300;
+            background-color: $lightblue-color;
+            width: fit-content;
+            padding: 0px 15px;
+            margin: 0;
+            font-family: $lobster;
+            font-weight: 100;
+        }
+
+        .icon /* Icône du menu */
+        {
+            width: 50px;
+            height: auto;
+            position: absolute;
+            right: -25px;
+            top: -30px;
+        }
+
+        .prices-container /* Container du prix et du nom de l'article */
+        {
+            display: flex;
+            flex-direction: column;
+
+            .price 
+            {
+                margin: 5px 10px;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+
+                .first 
+                {
+                    margin-top: 30px;
+                }
+
+                p 
+                {
+                    color: white;
+                    text-align: center;
+                    width: fit-content;
+                }
+
+                .menu-name 
+                {
+                    margin-bottom: 0;
+                }
+
+                .menu-price 
+                {
+                    margin: 0;
+                    margin-top: 5px;
+                    color: #a0f4ff;
+                }
+
+                .last 
+                {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+    .entrees, .boissons, .plats, .desserts /* Ajout d'une animation sur les différentes cartes des menus */
+    {
+        opacity: 0;
+        transform: translateY(40%);
+        animation-name: translate;
+        animation-duration: 0.8s;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+    }
+
+    .entrees /* Organisation des menus et délais d'apparition */
+    {
+        order: 2;
+        animation-delay: 0.4s;
+    }
+
+    .plats /* Organisation des menus et délais d'apparition */
+    {
+        order: 1;
+        animation-delay: 0.2s;
+    }
+
+    .boissons /* Organisation des menus et délais d'apparition */
+    {
+        order: 4;
+        animation-delay: 0.8s;
+    }
+
+    .desserts /* Organisation des menus et délais d'apparition */
+    {
+        order: 3;
+        animation-delay: 0.6s;
+    }
+
+    @keyframes translate {
+        100% 
+        {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+}
+
+/* ABOUT */
+.about-container 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .logo 
+    {
+        margin-top: 40px;
+        img 
+        {
+            width: 200px;
+            height: auto;
+        }
+    }
+
+    /* Gère l'ensemble des articles */
+    .about
+    {
+        padding: 20px 0;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .title 
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-top: 20px;
+
+            span 
+            {
+                background-color: white;
+                height: 2px;
+                width: 30px;
+            }
+
+            h2 
+            {
+                font-family: $lobster;
+                color: white;
+                font-weight: 100;
+                font-size: 25px;
+                padding: 0px 20px;
+                white-space: nowrap;
+                margin: 0px 0 0 0;
+            }
+        }
+
+        .content 
+        {
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            .txt 
+            {
+                p 
+                {
+                    font-size: 10px;
+                    color: white;
+                    text-align: justify;
+                }
+                width: 80%;
+            }
+
+            .logo 
+            {
+                img 
+                {
+                    width: 150px;
+                    height: auto;
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    /* Image de la vague blanche */
+    .white-wave 
+    {
+        width: 100%;
+        height: 6vh;
+        background-image: url("../images/white-wave.png");
+        background-position: top;
+        background-size: cover;
+    }
+
+    /* Permet de gérer l'article "Comment nous trouver" */
+    .find 
+    {
+        background-color: white;
+        padding: 0 0 40px 0;
+        width: 100%;
+        margin-bottom: 0;
+
+        .title 
+        {
+            span 
+            {
+                background-color: black;
+            }
+
+            h2
+            {
+                color: black;
+                padding: 0px 8px;
+            }
+        }
+
+        .social-media 
+        {
+            @include center-center();
+            margin-top: 30px;
+            margin-bottom: 20px;
+
+            ul 
+            {
+                display: flex;
+                flex-direction: row;
+
+                .facebook 
+                {
+                    padding: 10px 17px;
+                }
+
+                li 
+                {
+                    a 
+                    {
+                        background-color: white;
+                        animation-name: shrink;
+                        animation-duration: 5s;
+                        animation-timing-function: ease-in;
+                        animation-iteration-count: infinite;
+                        border-radius: 100%;
+                        padding: 10px 15px;
+                        margin: 10px;
+
+                        i 
+                        {
+                            color: black;
+                        }
+                    }
+
+                    @keyframes shrink 
+                    {
+                        0% 
+                        {
+                            box-shadow: 0px 0px 4px $lightblue-color;
+                        }
+                        20% 
+                        {
+                            box-shadow: 0px 0px 12px $lightblue-color;
+                        }
+                        40% 
+                        {
+                            box-shadow: 0px 0px 8px $lightblue-color;
+                        }
+                        80% 
+                        {
+                            box-shadow: 0px 0px 12px $lightblue-color;
+                        }
+                        100% 
+                        {
+                            box-shadow: 0px 0px 4px $lightblue-color;
+                        }
+                    }
+                }
+            }
+        }
+
+        .content 
+        {
+            display: flex;
+            justify-content: center;
+            flex-direction: column-reverse;
+
+
+            .google-map 
+            {
+                display: flex;
+                justify-content: center;
+                margin-top: 20px;
+                .map 
+                {
+                    width: 90%;
+                    max-width: 1000px;
+                }
+            }
+        }
+    }
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   TABLET                                   */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 768px)
+{
+    /* --------------------------------- GENERAL -------------------------------- */
+
+    /* navigation */
+    .main-nav 
+    {
+        .title-nav 
+        {
+            i 
+            {
+                font-size: 30px;
+                display: block;
+            }
+
+            .title 
+            {
+                font-size: 30px;
+            }
+        }
+    }
+
+    /* main-nav (burger) */
+    .hidden-elements 
+    {
+        overflow: hidden;
+        gap: 20px;
+        top: 77px;
+        position: absolute;
+        width: 100vw;
+        left: 0;
+        transition: .5s ease-in;
+        z-index: 1;
+        
+        ul 
+        {
+            gap: 20px;
+        }
+    }
+
+    /* Footer */
+    footer 
+    {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        .number, .address, .hour, .copyright 
+        {
+            width: 25%;
+        }
+
+        .copyright 
+        {
+            display: flex;
+            justify-content: center;
+        }
+
+        .number, .address, .hour
+        {
+            margin-bottom: 0px;
+        }
+
+        .address p 
+        {
+            width: 150px;
+        }
+
+        p 
+        {
+            margin: 0;
+            margin-top: 5px;
+        }
+    }
+
+    /* HOME */
+    .welcome-container 
+    {
+        background-image: url("../images/bg.jpg");
+        background-size: auto 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        align-items: center;
+
+        .text-elements-container 
+        {
+            width: 330px;
+            position: static;
+            
+            width: 100%;
+
+            h1 
+            {
+                font-size: 50px;
+            }
+
+            p 
+            {
+                font-size: 3vw;
+                width: 45%;
+            }
+        }
+    }
+
+    .menu-preview-container 
+    {
+        .menu-preview 
+        {
+            .card-menu 
+            {
+                margin: 0 25px 25px 25px;
+            }
+        }
+
+        .menu-preview-button 
+        {
+            a 
+            {
+                font-size: 18px;
+            }
+        }
+    }
+
+    /* Contact */
+    .contact-title-container 
+    {
+        .contact-title 
+        {
+            h1 
+            {
+                font-size: 50px;
+            }
+
+            p 
+            {
+                font-size: 20px;
+            }
+        }
+    }
+
+    /* Reserve */
+    .reservation-container 
+    {
+        .reservation-title 
+        {
+            h1 
+            {
+                font-size: 40px;
+            }
+
+            p 
+            {
+                font-size: 25px;
+            }
+        }
+
+        .reservation-form-container 
+        {
+            .reservation-form 
+            {
+                .row 
+                {
+                    display: flex;
+                    justify-content: space-between;
+
+                    input 
+                    {
+                        margin-right: 10px;
+                    }
+
+                    input[name="date"]
+                    {
+                        width: 150px;
+                    }
+
+                    input[name="amount"] 
+                    {
+                        width: 180px;
+                        text-align: left;
+                    }
+
+                    .right 
+                    {
+                        margin-right: 0;
+                        margin-left: 10px;
+                    }
+                }
+
+                button 
+                {
+                    font-size: 20px;
+                    padding: 10px 40px;
+                    border-radius: 40px;
+                    margin: 30px 0;
+                }
+            }
+        }
+    }
+
+
+    /* ABOUT */
+    .about-container 
+    {
+        .about 
+        {
+            .title 
+            {
+                justify-content: space-between;
+                width: 100%;
+                span 
+                {
+                    width: 30%;
+                }
+
+                h2 
+                {
+                    font-size: 30px;
+                }
+            }
+
+            .content 
+            {
+                justify-content: center;
+                .txt 
+                {
+                    display: flex;
+                    justify-content: center;
+                    p 
+                    {
+                        font-size: 14px;
+                        line-height: 25px;
+                        width: 80%;
+                    }
+                }
+            }
+        }
+
+        .white-wave 
+        {
+            width: 100%;
+            height: 80px;
+        }
+
+        .find 
+        {
+            .social-media 
+            {
+                margin-top: 50px;
+
+                ul
+                {
+                    /* Rend le cercle qui contient le logo facebook rond */
+                    .facebook 
+                    {
+                        padding: 20px 28px;
+                    }
+
+                    li 
+                    {
+                        margin: 0px 20px;
+                        a
+                        {
+                            border-radius: 50%;
+                            display: flex;
+                            justify-content: center;
+                            padding: 20px 25px;
+
+                            i 
+                            {
+                                font-size: 50px;
+                            }
+                        }
+
+                        @keyframes shrink 
+                        {
+                            0% 
+                            {
+                                box-shadow: 0px 0px 4px $lightblue-color;
+                            }
+
+                            20% 
+                            {
+                                box-shadow: 0px 0px 20px $lightblue-color;
+                            }
+
+                            40% 
+                            {
+                                box-shadow: 0px 0px 8px $lightblue-color;
+                            }
+
+                            80% 
+                            {
+                                box-shadow: 0px 0px 30px $lightblue-color;
+                            }
+
+                            100% 
+                            {
+                                box-shadow: 0px 0px 4px $lightblue-color;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .content 
+            {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: center;
+                align-items: center;
+
+                p 
+                {
+                    font-size: 20px;
+                    text-align: center;
+                    font-weight: 300;
+                }
+
+                .adresse 
+                {
+                    display: none;
+                }
+
+                .google-map 
+                {                                                               
+                    display: flex;
+                    justify-content: center;
+                    width: 90vw;
+
+                    .map 
+                    {
+                        width: 90%;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        } 
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                   DESKTOP                                  */
+/* -------------------------------------------------------------------------- */
+
+@media screen and (min-width: 1024px)
+{
+    /* --------------------------------- General -------------------------------- */
+
+    /* NAV */
+    .main-nav 
+    {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .title-nav 
+        {
+            display: flex;
+            justify-content: center;
+            i 
+            {
+                display: none;
+            }
+        }
+
+        .hidden-elements 
+        {
+            all: unset;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+
+            .main-nav-ul 
+            {
+                list-style-type: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                li a 
+                {
+                    font-size: 16px;
+                }
+
+                .reserve 
+                {
+                    padding: 6px 20px;
+                    background-color: white;
+                    border-radius: 30px;
+                    color: $main-color;
+                    box-shadow: 2px 1px 5px rgb(58, 58, 58);
+                }
+            }
+
+            img 
+            {
+                display: none;
+            }
+        }
+    }
+
+    /* INDEX */
+
+    /* Section visible à l'écran */
+    .welcome-container 
+    {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        backdrop-filter: blur(5px);
+
+        .text-elements-container 
+        {
+
+            h1 
+            {
+                font-size: 70px;
+            }
+
+            p 
+            {
+                font-size: 28px;
+                width: 40%;
+            }
+
+            .btns-container 
+            {
+                a 
+                {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .menu-preview-container 
+    {
+        /* Titre de la prévisualisation des menus */
+        .menu-preview-title 
+        {
+            h2 
+            {
+                font-size: 45px;
+                margin: 50px 0;
+            }
+        }
+
+        .menu-preview-button 
+        {
+            a 
+            {
+                margin: 30px 0;
+            }
+        }
+    }
+
+    /* CONTACT */
+    .contact-form-container 
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        /* Formulaire de contact */
+        .contact-form 
+        {
+            width: 80%;
+            .row 
+            {
+                flex-direction: row;
+                justify-content: space-between;
+                width: 80%;
+
+                input 
+                {
+                    margin: 0;
+                    margin-right: 40px;
+                }
+
+                .right 
+                {
+                    margin: 0;
+                    margin-left: 40px;
+                }
+            }
+
+            textarea[name='message'] 
+            {
+                height: 100px;
+            }
+
+            input[name='name'], input[name='firstname'], input[name='email']
+            {
+                margin: 30px 0;
+            }
+        }
+    }
+
+    /* Reserve */
+    .reservation-container 
+    {
+        align-items: center;
+        .reservation-form-container 
+        {
+            flex-direction: row;
+            height: 60vh;
+            justify-content: center;
+            align-items: center;
+
+            /* Image à côté du formulaire */
+            .form-img 
+            {
+                width: 50%;
+                display: flex;
+                justify-content: center;
+
+                img 
+                {
+                    width: 400px;
+                    height: 300px;
+                }
+            }
+
+            /* Formulaire de réservation */
+            .reservation-form 
+            {
+                align-items: center;
+                padding-left: 20px;
+            }
+        }
+    }
+
+    /* MENU */
+    .menu-title 
+    {
+        h1 
+        {
+            font-size: 40px;
+        }
+    }
+
+    .menus-section 
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: min-content;
+        width: fit-content;
+        align-items: flex-start;
+        width: 100%;
+
+        .menu 
+        {
+            margin:20px 30px;
+
+            .title 
+            {
+                font-size: 30px;
+                top: -25px;
+            }
+        }
+
+        /* Organisation du placement des menus */
+        .plats 
+        {
+            order: 1;
+            width: 80%;
+            max-width: none;
+
+            .prices-container 
+            {
+                margin-top: 20px;
+                margin-bottom: 20px;
+                .price 
+                {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 5px 10px;
+
+                    p, .last, .first
+                    {
+                        margin: 0;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+        .entrees 
+        {
+            order: 2;
+        }
+
+        .boissons 
+        {
+            order: 3;
+        }
+
+        .desserts 
+        {
+            order: 4;
+        }
+    }
+
+    /* ABOUT */
+    .about-container 
+    {
+        .about 
+        {
+            margin-right: 0;
+            .title 
+            {
+                h2 
+                {
+                    font-size: 45px;
+                }
+            }
+
+            .content 
+            {
+                .txt 
+                {
+                    p
+                    {
+                        font-size: 20px;
+                        line-height: 35px;
+                    }
+                }
+            }
+        }  
+
+        /* Vague blanche */
+        .white-wave 
+        {
+            height: 100px;
+        }
+    }
+}

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Kevin Monteiro, portfolio, web developer, découvrez mes compétences.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <!--Contient les barres de navigation-->
+    <header>
+        <!--Barre de navigation mobile et tablette-->
+        <div class="mobile-nav">
+            <nav class="social-media">
+                <ul>
+                    <li><a href="https://github.com/Kevdacosta07"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://www.behance.net/kevinmonteir"><i class="fa-brands fa-behance"></i></a></li>
+                    <li><a href="https://www.instagram.com/kevin.mntrc/"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </nav>
+
+            <div class="title">
+                <h2>Kevin Monteiro</h2>
+            </div>
+
+            <nav class="navigation">
+                <i class="fa-solid fa-bars" onclick="openCloseMenu()"></i>
+                <ul id="dropdown-mobile-nav" data-state="closed">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <span class="divider"></span>
+                    <li><p class="workMobile" onclick="contactPageHandler()">Travaillons ensemble<i class="fa-sharp fa-solid fa-check"></i></p></li>
+                    <i class="fa-solid fa-x close" onclick="openCloseMenu()"></i>
+                </ul>
+            </nav>
+        </div>
+
+        <!--Barre de navigation ordinateur-->
+        <div class="desktop-nav">
+            <nav class="top-nav">
+                <div class="social-media">
+                    <ul>
+                        <li><a href="https://github.com/Kevdacosta07" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                        <li><a href="https://www.behance.net/kevinmonteir" target="_blank"><i class="fa-brands fa-behance"></i></a></li>
+                        <li><a href="https://www.instagram.com/kevin.mntrc/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+
+                <div class="title">
+                    <h2>Kevin Monteiro</h2>
+                </div>
+
+
+                <div class="contact">
+                    <p class="workButton" onclick="contactPageHandler()">Travaillons ensemble <i class="fa-solid fa-check"></i></p>
+                </div>
+            </nav>
+
+            <nav class="bottom-nav">
+                <ul>
+                    <li><a href="#">Accueil</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--Section des compétences-->
+    <div class="intro" data-state="open">
+        <video autoplay loop muted>
+            <source src="video/bg.mp4" type="video/mp4">
+        </video>
+
+        <div class="text">
+            <h1>Kevin Monteiro</h1>
+            <p class="subtitle">Web Developper</p>
+            <p class="openPortfolio" onclick="closeIntro()">Accéder au portfolio</p>
+        </div>
+    </div>
+
+    <!--Section hero banner-->
+    <div class="hero-banner">
+        <div class="stars">
+            <div class="stars"></div>
+            <div class="stars2"></div>
+            <div class="stars3"></div>
+        </div>
+        <div class="text-container">
+            <div class="text">
+                <h2>Développeur Web</h2>
+                <p id="appearText"></p>
+            </div>
+        </div>
+
+        <div class="btns-container">
+            <div class="btn projects" onclick="scrollToProjects()">
+                <div class="icon">
+                    <i class="fa-solid fa-flask"></i>
+                </div>
+
+                <div class="txt">
+                    <h3>Mes projets</h3>
+                    <p>Consulter mes projets</p>
+                </div>
+            </div>
+
+            <div class="btn" onclick="scrollToSkills()">
+                <div class="icon skills">
+                    <i class="fa-solid fa-toolbox"></i>
+                </div>
+
+                <div class="txt">
+                    <h3>Mes compétences</h3>
+                    <p>Consulter mes compétences</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Section des projets-->
+    <div class="about-container">
+        <div class="image-profile"></div>
+        <div class="text-container">
+            <p>Je m'appelle Kevin Monteiro et j'ai 22 ans. Je suis originaire du Portugal, mais j'habite actuellement en Suisse. Je suis passionné par l'informatique, apprendre de nouvelles choses et le football. Actuellement en formation pour devenir développeur web. Je suis un passionné d'informatique depuis mon plus jeune âge et j'ai toujours l'envie de découvrir de nouvelles technologies. En me formant au développement web, j'ai acquis des compétences pratiques en HTML, CSS et JavaScript. Mon but est de devenir un développeur web professionnel et de travailler dans un environnement stimulant où je peux continuer à apprendre et à progresser.</p>
+            <a>Consulter mes projets</a>
+        </div>
+    </div>
+
+    <!--Section des compétences-->
+    <div id="skills" class="skills-container">
+        <div class="skills-title">
+            <h2>Compétences</h2>
+        </div>
+
+        <div class="cards-container">
+            <div class="mobile-slider-container">
+                <div class="carousel">
+                    <div class="skill-card">
+                        <div class="top-card">
+                            <img src="./img/Skills/html.png" alt="">
+                        </div>
+                        <div class="bottom-card">
+                            <div class="title">
+                                <h3>01</h3>
+                                <span class="line"></span>
+                                <h3>Html</h3>
+                            </div>
+
+                            <div class="skill-level-container">
+                                <p>Niveau de maîtrise</p>
+                                <div class="loadingBar-container">
+                                    <div class="loading-bar">
+                                        <div class="fill-loading">
+                                            <span class="tooltip">100%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="top-card">
+                            <img src="./img/Skills/css.png" alt="">
+                        </div>
+                        <div class="bottom-card">
+                            <div class="title">
+                                <h3>02</h3>
+                                <span class="line"></span>
+                                <h3>CSS</h3>
+                            </div>
+
+                            <div class="skill-level-container">
+                                <p>Niveau de maîtrise</p>
+                                <div class="loadingBar-container">
+                                    <div class="loading-bar">
+                                        <div class="fill-loading">
+                                            <span class="tooltip">85%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="top-card">
+                            <img src="./img/Skills/js.png" alt="">
+                        </div>
+                        <div class="bottom-card">
+                            <div class="title">
+                                <h3>03</h3>
+                                <span class="line"></span>
+                                <h3>Javascript</h3>
+                            </div>
+
+                            <div class="skill-level-container">
+                                <p>Niveau de maîtrise</p>
+                                <div class="loadingBar-container">
+                                    <div class="loading-bar">
+                                        <div class="fill-loading">
+                                            <span class="tooltip">80%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="top-card">
+                            <img src="./img/Skills/java.png" alt="">
+                        </div>
+                        <div class="bottom-card">
+                            <div class="title">
+                                <h3>04</h3>
+                                <span class="line"></span>
+                                <h3>Java</h3>
+                            </div>
+
+                            <div class="skill-level-container">
+                                <p>Niveau de maîtrise</p>
+                                <div class="loadingBar-container">
+                                    <div class="loading-bar">
+                                        <div class="fill-loading">
+                                            <span class="tooltip">90%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <div class="top-card">
+                            <img src="./img/Skills/python.png" alt="">
+                        </div>
+                        <div class="bottom-card">
+                            <div class="title">
+                                <h3>05</h3>
+                                <span class="line"></span>
+                                <h3>Python</h3>
+                            </div>
+
+                            <div class="skill-level-container">
+                                <p>Niveau de maîtrise</p>
+                                <div class="loadingBar-container">
+                                    <div class="loading-bar">
+                                        <div class="fill-loading">
+                                            <span class="tooltip">60%</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="slider-manager">
+                    <button onclick="previousImage()">&lt;</button>
+                    <i class="fa-solid fa-pause" id="autoSliderController"></i>
+                    <button onclick="nextImage()">></button>
+                </div>
+            </div>
+
+            <div class="desktop-container">
+                <div class="skill-card">
+                    <div class="top-card">
+                        <img src="./img/Skills/html.png" alt="">
+                    </div>
+                    <div class="bottom-card">
+                        <div class="title">
+                            <h3>01</h3>
+                            <span class="line"></span>
+                            <h3>Html</h3>
+                        </div>
+
+                        <div class="skill-level-container">
+                            <p>Niveau de maîtrise</p>
+                            <div class="loadingBar-container">
+                                <div class="loading-bar">
+                                    <div class="fill-loading">
+                                        <span class="tooltip">100%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="top-card">
+                        <img src="./img/Skills/css.png" alt="">
+                    </div>
+                    <div class="bottom-card">
+                        <div class="title">
+                            <h3>02</h3>
+                            <span class="line"></span>
+                            <h3>CSS</h3>
+                        </div>
+
+                        <div class="skill-level-container">
+                            <p>Niveau de maîtrise</p>
+                            <div class="loadingBar-container">
+                                <div class="loading-bar">
+                                    <div class="fill-loading">
+                                        <span class="tooltip">85%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="top-card">
+                        <img src="./img/Skills/js.png" alt="">
+                    </div>
+                    <div class="bottom-card">
+                        <div class="title">
+                            <h3>03</h3>
+                            <span class="line"></span>
+                            <h3>Javascript</h3>
+                        </div>
+
+                        <div class="skill-level-container">
+                            <p>Niveau de maîtrise</p>
+                            <div class="loadingBar-container">
+                                <div class="loading-bar">
+                                    <div class="fill-loading">
+                                        <span class="tooltip">80%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="top-card">
+                        <img src="./img/Skills/java.png" alt="">
+                    </div>
+                    <div class="bottom-card">
+                        <div class="title">
+                            <h3>04</h3>
+                            <span class="line"></span>
+                            <h3>Java</h3>
+                        </div>
+
+                        <div class="skill-level-container">
+                            <p>Niveau de maîtrise</p>
+                            <div class="loadingBar-container">
+                                <div class="loading-bar">
+                                    <div class="fill-loading">
+                                        <span class="tooltip">90%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="top-card">
+                        <img src="./img/Skills/python.png" alt="">
+                    </div>
+                    <div class="bottom-card">
+                        <div class="title">
+                            <h3>05</h3>
+                            <span class="line"></span>
+                            <h3>Python</h3>
+                        </div>
+
+                        <div class="skill-level-container">
+                            <p>Niveau de maîtrise</p>
+                            <div class="loadingBar-container">
+                                <div class="loading-bar">
+                                    <div class="fill-loading">
+                                        <span class="tooltip">60%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Section des projets-->
+    <div id="projects" class="project-container">
+        <div class="stars"> <!--Animations étoiles de fond-->
+            <div class="stars"></div>
+            <div class="stars2"></div>
+            <div class="stars3"></div>
+        </div>
+
+        <div class="title">
+            <h2>Projets</h2>
+        </div>
+
+        <div class="all-project">
+            <div class="projects-wrapper">
+                <div class="project crustaurant">
+                    <h3>Crustaurant</h3>
+                    <p>Restaurant de crustacés</p>
+                    <a href="projects/Crustaurant/index.html" target="_blank">Voir le projet</a>
+                </div>
+                <div class="project our-moon">
+                    <h3>Our moon</h3>
+                    <p>Apprendre plus sur la lune</p>
+                    <a href="projects/Ourmoon/index.html" target="_blank">Voir le projet</a>
+                </div>
+                <div class="project neptunia">
+                    <h3>Neptunia</h3>
+                    <p>Night club</p>
+                    <a href="https://neptunia.sae.swiss/" target="_blank">Voir le projet</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Page de contact-->
+    <div class="contact-page-container">
+
+        <div class="contact-page" data-state="close">
+            <div class="title">
+                <h2>Contact</h2>
+            </div>
+
+            <div class="direct-contact-container">
+                <a href="tel:+41765534154">Appelez moi <i class="fa-solid fa-phone"></i></a>
+            </div>
+
+            <div class="globalMessageContainer">
+                <p class="globalMessageText"></p>
+            </div>
+
+            <form>
+                <div class="input-box" data-id="firstname">
+                    <p class="error-txt"></p>
+                    <input type="text" name="firstname" id="firstname" data-id="firstname" placeholder="Prénom" required>
+                </div>
+
+                <div class="input-box" data-id="lastname">
+                    <p class="error-txt"></p>
+                    <input type="text" name="lastname" id="lastname" placeholder="Nom" required>
+                </div>
+
+                <div class="input-box" data-id="mail">
+                    <p class="error-txt"></p>
+                    <input type="email" name="mail" id="mail" placeholder="Mail" required>
+                </div>
+
+                <div class="input-box" data-id="phone">
+                    <p class="error-txt"></p>
+                    <input type="number" name="phone" id="phone" placeholder="Téléphone" required>
+                </div>
+
+                <div class="input-box textArea-box">
+                    <p class="error-txt"></p>
+                    <textarea name="message" id="message" placeholder="Message" required></textarea>
+                </div>
+
+                <p class="submit">Envoyer</p>
+            </form>
+
+            <div class="close-btn" onclick="contactPageHandler()">
+                <p><i class="fa-solid fa-x"></i></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Copyright © 2023 Kevin Monteiro</p>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+</html>

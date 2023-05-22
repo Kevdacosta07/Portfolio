@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="shortcut icon" type="image/icon" href="assets/Favicon.ico"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+    <link href="https://fonts.cdnfonts.com/css/poppins" rel="stylesheet">
+    <title>Our moon</title>
+</head>
+
+<body>
+    <button id="scroll-top" onclick="goTop()">Scroll to top <i class="fa-solid fa-arrow-up scroll-top-icon"></i> </button>
+
+    <header>
+        <nav class="main-nav">
+            <div class="menu-title">
+                <i class="fa-solid fa-bars icon-bar" onclick="openmenu()"></i>
+                <a href="" class="logo"><img src="./assets/logo.png" alt="Logo Our Moon" class="logo"></a>
+            </div>
+
+            <div class="items-container">
+                <ul class="nav-menu burger-nav-menu" data-state="close" id="menulink">
+                    <li><a href="#whatis" onclick="closemenu()">Informations</a></li>
+                    <li><a href="#phaselune" onclick="closemenu()">Phases lunaires</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="main-container">
+            <h1 id="main-h1">Découvrez en plus sur notre lune</h1>
+            <a href="#whatis" class="cta">En savoir plus</a>
+        </div>
+    </header>
+
+    <section class="container-moon-info">
+
+        <div class="mooninfo-title">
+            <h2>La Lune</h2>
+        </div>
+
+        <nav class="mooninfo-nav">
+            <ul class="mooninfo-ul">
+                <li class="moonnav-items"><a href="#whatis">C'est quoi ?</a></li>
+                <li class="moonnav-items"><a href="#how-work">Comment ça marche ?</a></li>
+                <li class="moonnav-items"><a href="#importance">Son importance</a></li>
+            </ul>
+        </nav>
+
+        <article class="mooninfo reveal" id="whatis">
+            <div class="moooninfo-section-top">
+                <div class="up-separator"></div>
+                <div class="mooninfo-section-title">
+                    <h3>C'est quoi ?</h3>
+                </div>
+                <div class="down-separator"></div>
+            </div>
+
+            <div class="mooninfo-text">
+                <div class="mooninfo-textcontainer">
+                    <p>La Lune est le seul satellite naturel de la Terre. C'est aussi le cinquième plus grand satellite dans le système solaire par rapport à la taille de la planète qu'elle orbit. La Lune a une influence importante sur notre planète, notamment en ce qui concerne les marées et le rythme des saisons. Elle a été visitée par des humains à plusieurs reprises, lors des missions Apollo de la NASA dans les années 60 et 70. Depuis, de nombreuses missions robotiques ont été envoyées pour étudier la Lune de plus près. Bien que la Lune soit principalement composée de roches et de poussière, on pense qu'elle pourrait également avoir un noyau solide et une petite quantité de glace d'eau dans ses cratères polaires. La Lune continue d'être un sujet d'étude passionnant pour les scientifiques et les passionnés d'astronomie à travers le monde.</p>
+                </div>
+            </div>
+            
+        </article>
+
+        <article class="mooninfo reveal" id="how-work">
+            <div class="moooninfo-section-top">
+                <div class="up-separator"></div>
+                <div class="mooninfo-section-title">
+                    <h3>Comment ça marche ?</h3>
+                </div>
+                <div class="down-separator"></div>
+            </div>
+
+            <div class="mooninfo-text">
+                <div class="mooninfo-textcontainer">
+                    <div>
+                        <p class="reduce-bottom-margin">La Lune tourne autour de la Terre sur une orbite elle-même en mouvement autour du Soleil. Cela signifie que la Lune met un certain temps pour effectuer un tour complet autour de la Terre, ce qui correspond à ce qu'on appelle un "mois lunaire". La Lune met environ 27,3 jours terrestres pour compléter un tour complet autour de la Terre, bien que le temps exact puisse varier légèrement en raison de différents facteurs tels que l'inclinaison de son orbite.</p>
+                    </div>
+
+                    <div>
+                        <p class="reduce-margin">La Lune a également un mouvement de rotation, ce qui signifie qu'elle tourne sur elle-même tout en tournant autour de la Terre. Ce mouvement de rotation est synchrone, ce qui signifie que la Lune met autant de temps à tourner sur elle-même qu'à effectuer un tour complet autour de la Terre. Ainsi, du point de vue de la Terre, la Lune a toujours la même face tournée vers nous, ce qui explique pourquoi nous ne voyons jamais l'autre face de la Lune.</p>
+                    </div>
+                    
+                    <div>
+                        <p class="reduce-margin">En raison de ces mouvements, la Lune présente différentes phases qui sont visibles depuis la Terre. Ces phases vont du nouveau lune, où la Lune est située entre la Terre et le Soleil et ne peut donc pas être vue depuis la Terre, à la pleine lune, où la Lune est située de l'autre côté de la Terre par rapport au Soleil et est donc entièrement visible depuis la Terre. Les autres phases de la Lune incluent la croissante, la décroissante et le premier et dernier quartier.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="mooninfo reveal" id="importance">
+            <div class="moooninfo-section-top">
+                <div class="up-separator"></div>
+                <div class="mooninfo-section-title">
+                    <h3>Son importance</h3>
+                </div>
+                <div class="down-separator"></div>
+            </div>
+
+            <div class="mooninfo-text">
+                <div class="mooninfo-textcontainer">
+                    <div>
+                        <p class="reduce-bottom-margin">La Lune tourne autour de la Terre sur une orbite elle-même en mouvement autour du Soleil. Cela signifie que la Lune met un certain temps pour effectuer un tour complet autour de la Terre, ce qui correspond à ce qu'on appelle un "mois lunaire". La Lune met environ 27,3 jours terrestres pour compléter un tour complet autour de la Terre, bien que le temps exact puisse varier légèrement en raison de différents facteurs tels que l'inclinaison de son orbite.</p>
+                    </div>
+
+                    <div>
+                        <p class="reduce-margin">La Lune a également un mouvement de rotation, ce qui signifie qu'elle tourne sur elle-même tout en tournant autour de la Terre. Ce mouvement de rotation est synchrone, ce qui signifie que la Lune met autant de temps à tourner sur elle-même qu'à effectuer un tour complet autour de la Terre. Ainsi, du point de vue de la Terre, la Lune a toujours la même face tournée vers nous, ce qui explique pourquoi nous ne voyons jamais l'autre face de la Lune.</p>
+                    </div>
+                    
+                    <div>
+                        <p class="reduce-margin">En raison de ces mouvements, la Lune présente différentes phases qui sont visibles depuis la Terre. Ces phases vont du nouveau lune, où la Lune est située entre la Terre et le Soleil et ne peut donc pas être vue depuis la Terre, à la pleine lune, où la Lune est située de l'autre côté de la Terre par rapport au Soleil et est donc entièrement visible depuis la Terre. Les autres phases de la Lune incluent la croissante, la décroissante et le premier et dernier quartier.</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </section>
+
+    <section class="container-moonphase" id="phaselune">
+        <div class="mooninfo-title">
+            <h2 class="moonphase-title-txt">Phases Lunaires</h2>
+        </div>
+
+        <nav class="moonphase-nav">
+            <ul class="mooninfo-ul">
+                <li class="moonnav-items"><a href="#new-moon">Nouvelle lune</a></li>
+                <li class="moonnav-items"><a href="#first-croissant">Premier croissant</a></li>
+                <li class="moonnav-items"><a href="#first-quarter">Premier quartier</a></li>
+                <li class="moonnav-items"><a href="#gibbeuse-croissante">Gibbeuse croissante</a></li>
+                <li class="moonnav-items"><a href="#full-moon">Pleine lune</a></li>
+                <li class="moonnav-items"><a href="#gibbeuse-decroissante">Gibbeuse décroissante</a></li>
+                <li class="moonnav-items"><a href="#dernier-quartier">Dernier quartier</a></li>
+                <li class="moonnav-items"><a href="#dernier-croissant">Dernier croissant</a></li>
+            </ul>
+        </nav>
+
+        <article class="moonphase reveal" id="new-moon">
+            <div class="moonphase-title">
+                <h3>Nouvelle Lune</h3>
+            </div>
+            <div class="textimg-container">
+                <img src="assets/lunes/new_lune.png" alt="Image d'une nouvelle lune">
+                <p>La première phase de la Lune est la nouvelle lune. Cela se produit lorsque la Lune se trouve entre la Terre et le Soleil, de sorte qu'elle ne peut pas être vue depuis la Terre. Pendant cette phase, la face sombre de la Lune est tournée vers la Terre.</p>
+            </div>
+        </article>
+
+        <article class="moonphase reveal" id="first-croissant">
+            <div class="moonphase-title">
+                <h3>Premier croissant</h3>
+            </div>
+            <div class="textimg-container">
+                <img src="assets/lunes/premier_croissant.png" alt="Image du premier croissant de lune">
+                <p>Le premier croissant est la deuxième phase de la Lune dans son cycle de rotation autour de la Terre. Cette phase se produit lorsque la Lune est visible depuis la Terre avec seulement une petite partie de sa face illuminée. Le premier croissant se produit lorsque la Lune a effectué environ un quart de son tour autour de la Terre depuis la phase de nouveau lune.</p>
+            </div>
+        </article>
+
+        <article class="moonphase reveal" id="first-quarter">
+            <div class="moonphase-title">
+                <h3>Premier quartier</h3>
+            </div>
+            <div class="textimg-container">
+                <img src="assets/lunes/premier_quartier.png" alt="Image du premier croissant de lune">
+                <p>Le premier quartier est la troisième phase de la Lune dans son cycle de rotation autour de la Terre. Cette phase se produit lorsque la Lune est visible depuis la Terre avec environ la moitié de sa face illuminée. Le premier quartier se produit lorsque la Lune a effectué environ un quart de son tour complet autour de la Terre depuis la phase de nouveau lune.</p>
+            </div>
+        </article>
+
+        <article class="moonphase reveal" id="gibbeuse-croissante">
+            <div class="moonphase-title">
+                <h3>Gibbeuse croissante</h3>
+            </div>
+            <div class="textimg-container">
+                <img src="assets/lunes/gibbeuse_croissante.png" alt="Image du premier croissant d'une gibbeuse croissante'">
+                <p>Le gibbeuse croissante est la quatrième phase de la Lune dans son cycle de rotation autour de la Terre qui se produit lorsque la Lune est visible depuis la Terre avec environ les trois quarts de sa face illuminée. Cette phase se produit lorsque la Lune a effectué environ la moitié de son tour complet autour de la Terre depuis la phase de nouveau lune.</p>
+            </div>
+        </article>
+
+        <article class="moonphase reveal" id="full-moon">
+            <div class="moonphase-title">
+                <h3>Pleine Lune</h3>
+            </div>
+            <div class="textimg-container">
+                <img src="assets/lunes/pleine_lune.png" alt="Image de la pleine lune">
+                <p>La pleine lune est la cinquième phase de la Lune dans son cycle de rotation autour de la Terre. Cette phase se produit lorsque la Lune est située de l'autre côté de la Terre par rapport au Soleil, de sorte que toute sa face est illuminée et visible depuis la Terre. La pleine lune se produit lorsque la Lune a effectué environ son tour complet autour de la Terre depuis la phase de nouveau lune.</p>
+            </div>
+        </article>
+
+        <article class="moonphase reveal" id="gibbeuse-decroissante">
+            <div class="moonphase-title">
+                <h3>Gibbeuse décroissante</h3>
+            </div>
+            <div class="textimg-container">
+                <img src="assets/lunes/gibbeuse_décroissante.png" alt="Image d'une gibbeuse décroissante">
+                <p>La gibbeuse décroissante est la sixième phase de la Lune, qui se produit lorsque la Lune est visible depuis la Terre avec environ les trois quarts de sa face sombre. Cette phase se produit lorsque la Lune a effectué environ trois quarts de son tour complet autour de la Terre depuis la phase de nouveau lune.</p>
+            </div>
+        </article>
+
+        <article class="moonphase reveal" id="dernier-quartier">
+            <div class="moonphase-title">
+                <h3>Dernier quartier</h3>
+            </div>
+            <div class="textimg-container">
+                <img src="assets/lunes/premier_quartier.png" alt="Image d'un dernier quartier" class="rotate">
+                <p>Le dernier quartier est la septième phase de la Lune dans son cycle de rotation autour de la Terre. Cette phase se produit lorsque la Lune est visible depuis la Terre avec environ la moitié de sa face sombre. Le dernier quartier se produit lorsque la Lune a effectué environ trois quarts de son tour complet autour de la Terre depuis la phase de nouveau lune.</p>
+            </div>
+        </article>
+
+        <article class="moonphase reveal" id="dernier-croissant">
+            <div class="moonphase-title">
+                <h3>Dernier croissant</h3>
+            </div>
+            <div class="textimg-container">
+                <img src="assets/lunes/premier_croissant.png" alt="Image d'un dernier quartier" class="rotate">
+                <p>Le dernier croissant de lune est la phase de la lune qui se produit juste avant la nouvelle Lune. Pendant cette phase, la lune est visible dans le ciel juste avant l'aube et a l'apparence d'un croissant mince et lumineux. Le croissant de lune se forme lorsque la lune se déplace dans sa orbite autour de la Terre et que seule une petite partie de sa face est éclairée par le soleil. La partie éclairée de la lune est orientée vers le soleil et vers la Terre, de sorte qu'elle apparaisse comme un croissant dans le ciel. Le dernier croissant de Lune marque le début de la nouvelle Lune, qui est la phase suivante du cycle lunaire.</p>
+            </div>
+        </article>
+
+    </section>
+
+    <footer>
+        <p class="copyright">Copyright © 2023 Our Moon</p>
+        <p class="author">Créé par Kevin Monteiro</p>
+    </footer>
+
+    <script src="./script/app.js"></script>
+</body>
+</html>

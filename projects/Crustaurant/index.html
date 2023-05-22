@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+    <meta name="description" content="Crustaurant est un restaurant proposant des plats constitués uniquement d'aliment provenant de la mer">
+    <script src="js/app.js"></script>
+    <title>Crustaurant</title>
+</head>
+<body>
+
+    <header class="header-index">
+
+        <!--Barre de navigation -->
+        <nav class="main-nav">
+
+            <!-- Titre de la barre de navigation-->
+            <div class="title-nav">
+                <a href="index.html" class="title">Crustaurant</a>
+
+                <!-- Icône qui permet d'ouvrir le menu déroulant -->
+                <i onclick="openMenuBurger()" class="fa-solid fa-bars bars-menu"></i>
+            </div>
+
+            <!-- Éléments présents dans la barre de navigation -->
+            <div class="hidden-elements" id="burgerlink" data-state="close">
+                <ul class="main-nav-ul">
+                    <li><a href="menus.html">Menus</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reservation.html" class="reserve">Réserver</a></li>
+                </ul>
+
+                <!-- Logo du restaurant visible au format mobile -->
+                <img src="images/logo.png" alt="Logo du restaurant Crustaurant" class="logo">
+            </div>
+        </nav>
+
+        <!-- Titre du site -->
+        <div class="welcome-container">
+            <div class="text-elements-container">
+                <h1>Crustaurant</h1>
+                <p>Découvrez l'océan sur votre assiette avec nos crustacés frais et délicieux!</p>
+                
+                <!-- Call to action -->
+                <div class="btns-container">
+                    <a href="menus.html" class="menus">Nos menus</a>
+                    <a href="a-propos.html" class="about">À propos</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Prévisualisation des menus -->
+    <div class="menu-preview-container">
+        <!-- Titre de la prévisualisation des menus -->
+        <div class="menu-preview-title">
+            <h2 class="title">Menus</h2>
+        </div>
+
+        <section class="menu-preview">
+
+            <!-- Card -->
+            <article class="card-menu">
+
+                <!-- Prix du menu -->
+                <div class="price-container">
+                    <p class="price">16.00€</p>
+                </div>
+
+                <!-- Ensemble des textes présent dans la card-->
+                <div class="text-container">
+                    <img src="images/preview1.png" alt="Image d'une assiette remplie de pâtes végétales">
+                    <h3>Pâtes végétales</h3>
+                    <p>Découvrez nos pâtes végétales, composée uniquement de légumes.</p>
+                </div>
+
+            </article>
+
+            <!-- Card -->
+            <article class="card-menu">
+
+                <!-- Prix du menu -->
+                <div class="price-container">
+                    <p class="price">27.00€</p>
+                </div>
+
+                <!-- Ensemble des textes présent dans la card-->
+                <div class="text-container">
+                    <img src="images/preview2.png" alt="Image d'une assiette avec de la nourriture">
+                    <h3>Saumon au persil</h3>
+                    <p>Découvrez notre saumon au persil réaménagé par nos chefs cuisiniers.</p>
+                </div>
+            </article>
+
+            <!-- Card -->
+            <article class="card-menu">
+
+                <!-- Prix du menu -->
+                <div class="price-container">
+                    <p class="price">32.00€</p>
+                </div>
+
+                <!-- Ensemble des textes présent dans la card-->
+                <div class="text-container">
+                    <img src="images/preview3.png" alt="Image d'une assiette remplie de fruits de mer">
+                    <h3>Plateau de fruits de mer</h3>
+                    <p>Découvrez de nouvelles saveurs avec notre plateau de fruits de mer.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- Boutton après le menu de prévisualisation -->
+        <div class="menu-preview-button">
+            <a href="menus.html">Voir la liste complète des menus <i class="fa-sharp fa-solid fa-clipboard-list"></i></a>
+        </div>
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+        
+        <!-- Adresse -->
+        <div class="address">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Rue de la pierre 5 78130 Chapet</p>
+        </div>
+
+        <!-- Horaires -->
+        <div class="hour">
+            <i class="fa-solid fa-clock"></i>
+            <p>lu-ve : 11h - 22h Samedi : 11h - 00h</p>
+        </div>
+
+        <!-- Numéro de téléphone -->
+        <div class="number">
+            <i class="fa-solid fa-phone"></i><p>+33 01 784 02 15</p>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>Crustaurant © 2023</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,832 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Black.otf) format("opentype");
+    font-weight: bolder;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Bold.otf) format("opentype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Thin.otf) format("opentype");
+    font-weight: lighter;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-ExtraLight.otf) format("opentype");
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Light.otf) format("opentype");
+    font-weight: 200;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(./fonts/Poppins-Regular.otf) format("opentype");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Medium.otf) format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-SemiBold.otf) format("opentype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-Bold.otf) format("opentype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins-ExtraBold.otf) format("opentype");
+    font-weight: 600;
+}
+
+* {}
+
+html 
+{
+    scroll-behavior: smooth;
+}
+
+body 
+{
+    margin: 0;
+    padding: 0;
+}
+
+a 
+{
+    text-decoration: none;
+    color: white;
+}
+
+ul 
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+i 
+{
+    color: white;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   MOBILE                                   */
+/* -------------------------------------------------------------------------- */
+
+
+/* Menu burger */
+
+.burger-nav-menu
+{
+    background: rgb(13, 17, 34);
+    width: 100vw;
+    top: 30px;
+    left: 0;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    overflow: hidden;
+    transition: 300ms ease-out;
+}
+
+.burger-nav-menu li a
+{
+    font-family: Poppins;
+    font-size: 2rem;
+    font-weight: 600;
+    font-style: normal;
+    padding: 3px;
+    transition: 0.1s ease-in;
+    color: #ffffff;
+}
+
+.burger-nav-menu[data-state="close"]
+{
+    height: 0vh;
+}
+
+.burger-nav-menu[data-state="open"]
+{
+    height: 30vh;
+}
+/*
+.menu-btn 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: left;
+    width: 2rem;
+    height: 2rem;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 10;
+    transition: 300ms ease-in-out;
+}*/
+
+
+/* Scroll top */
+#scroll-top 
+{
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 20px;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 30px;
+    border: none;
+    padding: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 11px;
+}
+
+.scroll-top-icon 
+{
+    color: black;
+    margin-left: 6px;
+}
+
+
+/* Le header contient toute la partie de haut (logo, barre de navigation, cta)*/
+
+header 
+{
+    width: 100%;
+    background-color: rgb(44, 59, 122);
+}
+
+.main-nav 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+a.logo 
+{
+    display: inline;
+    width: min-content;
+    height: min-content;
+}
+
+img.logo
+{
+    width: 80pt;
+    height: auto;
+    max-width: 200px;
+}
+
+.menu-title
+{
+    height: 36pt;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    width: 90%;
+}
+
+.main-container 
+{
+    background-image: url(../assets/bg_mobile.gif);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+}
+
+#main-h1 
+{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+    width: 80%;
+    margin-top: 0;
+}
+
+.cta
+{
+    padding: 10px 20px;
+    border: 2px solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 15px;
+    color: black;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-moon-info 
+{
+    background-image: linear-gradient(#060912, #27335B);
+    display: flex;
+    flex-direction: column;
+}
+
+.mooninfo-title 
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.mooninfo-title > h2
+{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin: 0;
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.mooninfo-nav 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mooninfo-ul 
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: fit-content;
+}
+
+.moonnav-items 
+{
+    font-family: 'Poppins', sans-serif;
+    padding: 5px;
+    margin: 10px;
+    font-size: 0.7em;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.mooninfo 
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.mooninfo-section-title 
+{
+    display: flex;
+    justify-content: center;
+}
+
+.up-separator 
+{
+    display: flex;
+    justify-self: left;
+    height: 1px;
+    background-color: white;
+    width: 45%;
+    padding: 1px;
+    border-radius: 40px;
+    margin-top: 1px;
+}
+
+.down-separator 
+{
+    display: flex;
+    float: right;
+    height: 1px;
+    background-color: white;
+    width: 45%;
+    padding: 1px;
+    border-radius: 40px;
+}
+
+.mooninfo-section-title > h3 
+{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.mooninfo-text 
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.mooninfo-textcontainer 
+{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.mooninfo-textcontainer p 
+{
+    color: white;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    text-align: justify;
+    margin: 40px 0 80px 0;
+}
+
+.mooninfo-textcontainer p.reduce-margin 
+{
+    color: white;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    text-align: justify;
+    margin: 10px 0 10px 0;
+}
+
+.mooninfo-textcontainer p.reduce-bottom-margin 
+{
+    color: white;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+.container-moonphase 
+{
+    background-image: linear-gradient(#27335B, #060912);
+    display: flex;
+    flex-direction: column;
+}
+
+.moonphase 
+{
+    margin: 30px 0;
+}
+
+h2.moonphase-title-txt 
+{
+    margin-top: 40px;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.moonphase-title 
+{
+    display: flex;
+    justify-content: center;
+}
+
+.moonphase-title > h3 
+{
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    margin-top: 30px;
+    font-weight: 500;
+    padding: 0 0 8px 0;
+    border-bottom: 2px solid white;
+    width: min-content;
+    white-space: nowrap;
+}
+
+.textimg-container 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.textimg-container > img
+{
+    width: 60%;
+    height: auto;
+}
+
+.textimg-container > p
+{
+    margin-top: 30px;
+    width: 70%;
+    height: auto;
+    text-align: justify;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.rotate 
+{
+    transform: rotate(180deg);
+}
+
+
+
+.reveal 
+{
+    opacity: 0;
+    translate: translateY(-30px);
+}
+
+.reveal-visible 
+{
+    opacity: 1;
+    translate: translateY(0);
+    transition: 1s cubic-bezier(.5, 0, 0, 1);
+}
+
+
+footer 
+{
+    padding: 10px;
+    background-color: #020306;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.copyright 
+{
+    color: white;
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 15px;
+    margin: 0;
+}
+
+.author 
+{
+    color: white;
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 10px;
+    margin: 0;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   TABLET                                   */
+/* -------------------------------------------------------------------------- */
+
+
+@media screen and (min-width:768px)
+{
+    #scroll-top 
+    {
+        display: none;
+        position: fixed;
+        bottom: 40px;
+        right: 20px;
+        z-index: 100;
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 30px;
+        border: none;
+        padding: 8px;
+        font-family: 'Poppins', sans-serif;
+        font-size: 12px;
+    }
+
+    header 
+    {
+        height: 100vh;
+        background-image: url(../assets/bg.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .burger-nav-menu[data-state="close"]
+    {
+        all: unset;
+
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-right: 15px;
+    }
+
+    img.logo 
+    {
+        margin-left: 15px;
+        width: 150px;
+        height: auto;
+    }
+
+    .main-nav 
+    {
+        /* RESET */
+        all: unset;
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: 3px;
+    }
+
+    .menu-title > i
+    {
+        display: none;
+    }
+
+    .items-container
+    {
+        /* RESET */
+        all: unset;
+
+        display: flex;
+        flex-direction: row;
+        justify-content:  center;
+        align-items: center;
+    }
+
+    .nav-menu li a 
+    {
+        /* RESET */
+        all: unset;
+
+        font-family: 'Poppins', sans-serif;
+        font-size: 14px;
+        font-weight: 300;
+        color: white;
+        padding: 5px;
+        margin-right: 10px;
+    }
+
+    .menu-title 
+    {
+        width: min-content;
+    }
+
+    .main-container 
+    {
+        background-image: none;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 135px;
+        height: 45%;
+        align-self: center;
+    }
+
+    .cta
+    {
+        padding: 10px 20px;
+        border: 2px solid #ffffff;
+        background-color: #ffffff;
+        border-radius: 15px;
+        color: black;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5em;
+    }
+
+    #main-h1 
+    {
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 3em;
+        text-align: center;
+        width: 60%;
+        margin-bottom: 0;
+    }
+
+    .container-moon-info 
+    {
+        background-image: linear-gradient(#27335B, #060912);
+    }
+
+    .moonnav-items 
+    {
+        font-family: 'Poppins', sans-serif;
+        padding: 10px;
+        margin: 10px;
+        font-size: 0.9em;
+        border: 2px solid white;
+        border-radius: 100px;
+    }
+
+    .container-moonphase {
+        background-image: linear-gradient(#060912, #27335B);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .moonphase 
+    {
+        margin: 30px 0;
+    }
+
+    .mooninfo-section-title > h3 
+    {
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.4em;
+        font-weight: 500;
+    }
+
+    .mooninfo-textcontainer p 
+    {
+        font-size: 14px;
+    }
+
+    .mooninfo-textcontainer p.reduce-bottom-margin 
+    {
+        font-size: 14px;
+    }
+
+    .mooninfo-textcontainer p.reduce-margin 
+    {
+        font-size: 14px;
+    }
+
+    h2.moonphase-title-txt 
+    {
+        margin-top: 40px;
+        font-size: 44px;
+        font-weight: bolder;
+    }
+    
+    .moonphase-title > h3 
+    {
+        font-size: 26px;
+    }
+
+    .textimg-container > img 
+    {
+        width: 40%;
+        height: auto;
+    }
+
+    .textimg-container > p 
+    {
+        font-size: 15px;
+    }
+
+    footer 
+    {
+        padding: 10px;
+        background-color: #161e37;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .copyright 
+    {
+        color: white;
+        font-family: Poppins;
+        font-weight: 300;
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .author 
+    {
+        color: white;
+        font-family: Poppins;
+        font-weight: 300;
+        font-size: 13px;
+        padding: 10px;
+        margin: 0;
+    }
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                                   LAPTOP                                   */
+/* -------------------------------------------------------------------------- */
+
+
+@media screen and (min-width:1024px)
+{
+    header 
+    {
+        height: 100vh;
+        background-image: url(../assets/bg.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nav-menu li a
+    {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    .nav-menu li a:hover
+    {
+        border-bottom: 2px solid white;
+        cursor: pointer;
+    }
+
+    .main-container 
+    {
+        height: 50%;
+        margin-top: 10%;
+    }
+
+    #main-h1 {
+        color: white;
+        font-family: 'Poppins', sans-serif;
+        font-weight: bold;
+        font-size: 4em;
+        text-align: center;
+        width: 60%;
+        margin-bottom: 0;
+    }
+
+
+    .container-moonphase {
+        background-image: linear-gradient(#060912, #27335B);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .moonphase-nav 
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 50%;
+    }
+
+    .moonphase 
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .textimg-container 
+    {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-self: center;
+        width: 80%;
+    }
+
+    .moonphase-title > h3 
+    {
+        font-size: 35px;
+    }
+
+    .textimg-container > img 
+    {
+        width: 30%;
+        height: auto;
+    }
+
+    .textimg-container > p 
+    {
+        font-size: 18px;
+        width: 40%;
+        text-align: left;
+    }
+
+
+}

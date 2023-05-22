@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesheet/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="shortcut icon" type="image/jpg" href="images/favicon.ico"/>
+    <meta name="description" content="Réservez en ligne votre table">
+    <script src="./js/app.js"></script>
+    <title>Réservez dés maintenant | Crustaurant</title>
+</head>
+<body>
+    <header>
+        <!--Barre de navigation -->
+        <nav class="main-nav">
+
+            <!-- Titre de la barre de navigation-->
+            <div class="title-nav">
+                <a href="index.html" class="title">Crustaurant</a>
+
+                <!-- Icône qui permet d'ouvrir le menu déroulant -->
+                <i onclick="openMenuBurger()" class="fa-solid fa-bars bars-menu"></i>
+            </div>
+
+            <!-- Éléments présents dans la barre de navigation -->
+            <div class="hidden-elements" id="burgerlink" data-state="close">
+                <ul class="main-nav-ul">
+                    <li><a href="menus.html">Menus</a></li>
+                    <li><a href="a-propos.html">À propos</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="reservation.html" class="reserve">Réserver</a></li>
+                </ul>
+
+                <!-- Logo du restaurant visible au format mobile -->
+                <img src="images/logo.png" alt="Logo du restaurant Crustaurant" class="logo">
+            </div>
+        </nav>
+    </header>
+
+    <!-- Container du titre, du formulaire et de l'illustation de réservation-->
+    <div class="reservation-container">
+        
+        <!-- Container du titre -->
+        <div class="reservation-title">
+            <h1>Réservez dés maintenant</h1>
+            <p>Veuillez remplir le formulaire ci-dessous</p>
+        </div>
+
+        <!-- Container du formulaire de réservation -->
+        <div class="reservation-form-container">
+
+            <!-- Formulaire de réservation -->
+            <form action="POST" class="reservation-form">
+                <!-- Div qui permet de passer les champs de texte l'un à côté de l'autre au format desktop et tablette -->
+                <div class="row">
+                    <!-- Prénom -->
+                    <input type="text" name="firstname" placeholder="Prénom">
+
+                    <!-- Nom -->
+                    <input type="text" name="name" placeholder="Nom" class="right">
+                </div>
+
+                <!-- E-Mail -->
+                <input type="email" name="mail" placeholder="E-mail">
+
+                <!-- Div qui permet de passer les champs de texte l'un à côté de l'autre au format desktop et tablette -->
+                <div class="row">
+
+                    <!-- Date de réservation -->
+                    <input type="date" name="date">
+
+                    <!-- Nombre de personnes -->
+                    <input type="number" class="right" name="amount" placeholder="Nombre de personnes">
+                </div>
+
+                <!--Bouton qui permet de réserver-->
+                <button>Réserver</button>
+            </form>
+
+            <!-- Container de l'image de réservation-->
+            <div class="form-img">
+                <img src="images/reserve-img.png" alt="Illustration de réservation">
+            </div>
+        </div>
+    </div>
+
+    <!-- Pied de page -->
+    <footer>
+
+        <!-- Adresse -->
+        <div class="address">
+            <i class="fa-solid fa-location-dot"></i>
+            <p>Rue de la pierre 5 78130 Chapet</p>
+        </div>
+
+        <!-- Horaires -->
+        <div class="hour">
+            <i class="fa-solid fa-clock"></i>
+            <p>lu-ve : 11h - 22h Samedi : 11h - 00h</p>
+        </div>
+
+        <!-- Numéro de téléphone -->
+        <div class="number">
+            <i class="fa-solid fa-phone"></i><p>+33 01 784 02 15</p>
+        </div>
+
+        <!-- Copyright -->
+        <div class="copyright">
+            <p>Crustaurant © 2023</p>
+        </div>
+    </footer>
+</body>
+</html>
